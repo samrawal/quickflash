@@ -1,4 +1,4 @@
-* quickflash: Quick commandline flashcards from a CSV or TSV file
+* 📇 quickflash: Quick commandline flashcards from a CSV or TSV file
 Quickly generate and study flashcards from a CSV file.
 
 ** Usage
@@ -7,6 +7,7 @@ Generate a CSV/TSV/any delimited file with the first column as the "front" side 
 The program will present the front of the cards. Press ENTER to show the back. Afterwards, press ENTER to remove the flashcard from the deck, or enter any character, then press ENTER, to move the card to the end of the deck for further review.
 
 ** Parameters
+#+BEGIN_SRC text
 usage: quickflash.py [-h] -f FILEPATH [-d DELIMITER] [--no_shuffle] [--no_header]
 
 optional arguments:
@@ -17,3 +18,4 @@ optional arguments:
                         Delimiter of source file (default \t)
   --no_shuffle          Prevent shuffling of data
   --no_header           Prevent considering first line as header
+#+END_SRC
