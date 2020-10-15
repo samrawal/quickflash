@@ -1,5 +1,7 @@
 '''
-Input: tsv file {front}\t{back}
+usage: python quickflash.py [-h] -f FILEPATH [-d DELIMITER] [--no_shuffle] [--no_header]
+
+Use the `help` flag for more information about the parameters.
 '''
 
 import sys, random, os
