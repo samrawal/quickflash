@@ -1,5 +1,5 @@
 * quickflash: Quick commandline flashcards from a CSV or TSV file
-Quickly study flashcards from a CSV file.
+Quickly generate and study flashcards from a CSV file.
 
 ** Usage
 Generate a CSV/TSV/any delimited file with the first column as the "front" side of flashcards, and second column as the "back" of flashcards.
