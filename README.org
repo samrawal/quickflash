@@ -8,7 +8,8 @@ The program will present the front of the cards. Press ENTER to show the back. A
 
 ** Parameters
 #+BEGIN_SRC text
-usage: quickflash.py [-h] -f FILEPATH [-d DELIMITER] [--no_shuffle] [--no_header]
+usage: quickflash.py [-h] -f FILEPATH [-d DELIMITER] [--front FRONT] [--back BACK]
+                     [--no_shuffle] [--no_header]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -16,6 +17,8 @@ optional arguments:
                         Path of file
   -d DELIMITER, --delim DELIMITER
                         Delimiter of source file (default \t)
+  --front FRONT         Column to serve as card front (default 0)
+  --back BACK           Column to serve as card back (default 1)
   --no_shuffle          Prevent shuffling of data
   --no_header           Prevent considering first line as header
 #+END_SRC

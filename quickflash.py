@@ -17,6 +17,21 @@ parser.add_argument(
     dest="delimiter",
     help=r"Delimiter of source file (default \t)",
 )
+
+parser.add_argument(
+    "--front",
+    default="0",
+    dest="front",
+    help="Column to serve as card front (default 0)",
+)
+
+parser.add_argument(
+    "--back",
+    default="1",
+    dest="back",
+    help="Column to serve as card back (default 1)",
+)
+
 parser.add_argument(
     "--no_shuffle",
     dest="shuffle",
@@ -30,6 +45,7 @@ parser.add_argument(
     help="Prevent considering first line as header",
 )
 
+
 args = parser.parse_args()
 
 
@@ -40,9 +56,10 @@ def quickflash(args):
         if args.header:
             data = data[1:]
         cards = [
-            (x.split(args.delimiter)[0], ' '.join(x.split(args.delimiter)[1:]))
+            (x.split(args.delimiter)[int(args.front)], x.split(args.delimiter)[int(args.back)])
             for x in data
         ]
+        
         if args.shuffle:
             random.shuffle(cards)
 
